@@ -1,0 +1,39 @@
+
+
+{content-type} : {text/plain}
+{authorization} : {Basic c3VwZXJ1c2VyOnF3ZQ==}
+{user-agent} : {PostmanRuntime/7.28.3}
+{accept} : {*/*}
+{postman-token} : {5d748171-0db5-4041-9c61-fe14a86a2eeb}
+{host} : {localhost:8080}
+{accept-encoding} : {gzip, deflate, br}
+{connection} : {keep-alive}
+{content-length} : {215}
+Так почти на всех работах.
+В итоге приходишь на собес, из всего перечисленного знаешь и умеешь дай бог 10%, и тебя берут.
+
+
+{content-type} : {text/plain}
+{authorization} : {Basic c3VwZXJ1c2VyOnF3ZQ==}
+{user-agent} : {PostmanRuntime/7.28.3}
+{accept} : {*/*}
+{postman-token} : {2451d9f5-2ac5-4478-84d9-11212b780037}
+{host} : {localhost:8080}
+{accept-encoding} : {gzip, deflate, br}
+{connection} : {keep-alive}
+{content-length} : {215}
+Так почти на всех работах.
+В итоге приходишь на собес, из всего перечисленного знаешь и умеешь дай бог 10%, и тебя берут.
+
+
+{content-type} : {text/plain}
+{authorization} : {Basic c3VwZXJ1c2VyOnF3ZQ==}
+{user-agent} : {PostmanRuntime/7.28.3}
+{accept} : {*/*}
+{postman-token} : {bc1dda2d-6304-473a-b0c3-29c91fa595b8}
+{host} : {localhost:8080}
+{accept-encoding} : {gzip, deflate, br}
+{connection} : {keep-alive}
+{content-length} : {215}
+Так почти на всех работах.
+В итоге приходишь на собес, из всего перечисленного знаешь и умеешь дай бог 10%, и тебя берут.
