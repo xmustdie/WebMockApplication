@@ -18,5 +18,6 @@ public class SaveService {
         headers.forEach((key, value) -> RequestLogger.log("{%s} : {%s}", key, value));
         RequestLogger.log("\n============== REQUEST BODY ====================\n");
         RequestLogger.log(data);
+        System.out.println("========== REQUEST SUCCESSFULLY PROCEED ============ ");
     }
 }

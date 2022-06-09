@@ -1,10 +1,10 @@
 package ru.nsk.mock.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -40,15 +40,29 @@ public class RequestLogger {
 
     private static void fileWrite(String text) {
         try {
+            if (fileWriter == null) {
+                fileWriter = new FileWriter(getFileName(), true);
+            }
             fileWriter.write(text + "\n");
             fileWriter.flush();
         } catch (IOException e) {
-            System.out.println("Cant write to log file" + e.getMessage());
+            System.out.println("Cant write to log file " + e.getMessage());
         }
     }
 
     private static String getFileName() {
-        String filename = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE) + " - " + LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME);
-        return filename.replace(":","") + EXT;
+        String filePath = new File("").getAbsolutePath() + "\\logs\\";
+        if (!Files.exists(Paths.get(filePath))) {
+            System.out.println("CREATING LOGS DIRECTORY....");
+            try {
+                Files.createDirectory(Paths.get(filePath));
+                System.out.println("SUCCESS !!!");
+            } catch (IOException e) {
+                System.out.println("Cant create logs directory " + e.getMessage());
+            }
+        }
+        String filename = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE) + " - "
+                + LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME).replace(":", "") + EXT;
+        return filePath + filename;
     }
 }

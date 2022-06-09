@@ -17,7 +17,6 @@ import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 
 @RestController
 @RequestMapping(value = "/", consumes = TEXT_PLAIN_VALUE)
-
 public class MainController {
 
     @Autowired
@@ -26,7 +25,6 @@ public class MainController {
     @PostMapping("SAPHostControl")
     public ResponseEntity<Void> firstEndPointMethod(@RequestHeader Map headers,
                                                     @RequestBody String resource) {
-
         service.saveData(headers, resource);
         return Responses.ok();
     }
