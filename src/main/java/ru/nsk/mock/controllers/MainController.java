@@ -16,7 +16,7 @@ import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
  */
 
 @RestController
-@RequestMapping(value = "/", consumes = TEXT_PLAIN_VALUE)
+@RequestMapping(value = "/")
 public class MainController {
 
     @Autowired
@@ -31,6 +31,20 @@ public class MainController {
 
     @PostMapping("SAPHostControl.cgi")
     public ResponseEntity<Void> secondEndPointMethod(@RequestHeader Map headers,
+                                                     @RequestBody String resource) {
+        service.saveData(headers, resource);
+        return Responses.ok();
+    }
+
+    @PutMapping("SAPHostControl")
+    public ResponseEntity<Void> thirdEndPointMethod(@RequestHeader Map headers,
+                                                    @RequestBody String resource) {
+        service.saveData(headers, resource);
+        return Responses.ok();
+    }
+
+    @PutMapping("SAPHostControl.cgi")
+    public ResponseEntity<Void> forthEndPointMethod(@RequestHeader Map headers,
                                                      @RequestBody String resource) {
         service.saveData(headers, resource);
         return Responses.ok();
