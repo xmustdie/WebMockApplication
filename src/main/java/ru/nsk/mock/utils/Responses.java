@@ -24,8 +24,4 @@ public final class Responses {
     public static ResponseEntity<Void> ok() {
         return new ResponseEntity(HttpStatus.OK);
     }
-
-    public static ResponseEntity<Void> forbidden() {
-        return new ResponseEntity(HttpStatus.FORBIDDEN);
-    }
 }

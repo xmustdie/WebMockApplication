@@ -13,7 +13,8 @@ import java.util.Map;
 @Service
 public class SaveService {
 
-    public void saveData(Map headers, String data) {
+    public void saveData(Map headers, String data, String endPoint) {
+        RequestLogger.log(endPoint + "\n");
         RequestLogger.log("\n============== REQUEST HEADERS =================\n");
         headers.forEach((key, value) -> RequestLogger.log("{%s} : {%s}", key, value));
         RequestLogger.log("\n============== REQUEST BODY ====================\n");
